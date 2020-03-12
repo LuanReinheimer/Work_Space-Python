@@ -1,0 +1,287 @@
+PYTHON NUNCA ESQUECER:
+
+OPERADORES ARITMÉTICOS
+5 + 3 adicionar 
+5 - 3 subtrair
+5 * 3 produto ou multiplicação
+5 / 3 divisões real
+pow (5,3) função interna para exponenciação ou 5 ** 3
+5 // 3 divisões inteira
+5 % 3 restos da divisão
+pow (81,1/2) Raiz quadrada ou 81 ** 1/2
+ORDEM DE PRECEDÊNCIA
+
+1 - ()
+2 - **
+3 -  *  /  // % 
+4 -  +  -
+
+BIBLIOTECA MATH
+
+CEIL Arredonda para cima
+FLOOR Arredonda para baixo
+SIN seno
+COS cosseno
+TAN tangente
+SQRT raiz quadrada
+POW potência
+PI p.i
+HYPOT o quadrado da hipotenusa igual a soma do quadrado dos catetos
+RADIANS radiano
+TRUNC truncar o número após a vírgula
+
+BIBLIOTECA RANDOM
+
+CHOICE Escolhe um elemento aleatório de uma 
+RADINT Escolhe aleatoriamente um número inteiro.
+SAMPLE  Transforma uma string em uma lista e depois embaralha essa lista. A população que deve ser informada é a string e o k é o número de caracteres da string que se deseja escolher aleatoriamente.
+Se quiser embaralhar todos os caracteres da string use len()
+SHUFFLE Embaralha os elementos de uma lista.
+
+BIBLIOTECAS ADICIONAIS
+
+PYGAME  Biblioteca criada para criação de jogos, com músicas, gráficos etc..
+SOCKET  Bilbioteca criada Soquetes e a API de soquete são usados para enviar mensagens através de uma rede
+TIME Hora, Data
+PLAYSOUND Escutar música
+
+Manipulando Texto
+
+Em uma cadeia de texto é separado por pequenos micro espaços de memória, e eles são contados o seu comprimento do total de caractere do 0, até o final
+
+FATIAMENTO
+
+0:0:0:--> No primeiro 0 fica a seleção inicial, no segundo é até onde ele vai selecionar e no final ele vai retirar -1, o último sempre é excluído, e o terceiro é de quantas vezes ele vai pular cada caractere
+
+ANÁLISE
+
+frase.LEN()-->           É o comprimento, irá exibir quantos caracteres há em uma caixa de texto selecionada
+frase.COUNT(‘0’,0,14)--> Irá exibir na tela quantas vezes ele achou o caractere ‘0’, do 0 até o  14, o último será excluído
+frase.FIND(‘Python’)-->  Irá dizer em que momento começou tal string ou caractere mencionado se não existir, retorna o valor (-1) inexistente
+Python IN frase -->      Irá verificar se existe a string mencionada esta na variavel 'Frase', - se sim, retornará True-, - se não, retornará False-
+
+TRANSFORMAÇÃO ------ NO PYTHON UMA LISTA DE STRING É IMUTAVEL, MAS CONSEGUIMOS MUDAR ELAS ATRAVÉS DE METADOS.
+
+frase.REPLACE(‘Python’, ‘Android’)--> Ele vai procurar pela string mencionada e vai substituir por outra, porem ele substitui em uma forma secundaria.
+frase.UPPER()--> Transformar a Caixa  de texto em letras maiúscula
+frase.LOWER()--> Transformar a Caixa de texto e minúsculo
+frase.CAPITALIZE()--> Apenas a primeira letra do inicio da frase em maiúsculo, jogando toda a string para minusculo.
+frase.TITLE()--> Ele vai quebrar a caixa de texto por blocos, e vai usar o Capitalize para deixar cada letra após o espaço, inicio do bloco em maiúsculo
+frase.STRIP()--> Espaços da direita e da esquerda (começo e final), serão apagados, serão ignorados pelo python usando o método strip
+frase.RSTRIP()--> Espaços da direita (final), serão apagados, serão ignorados, apenas os espaços da esquerda (começo) será mantido pelo python usando o método rstrip
+frase.LSTRIP()--> Espaços da esquerda (começo), serão apagados, serão ignorados, apenas os espaços da direita (final) será mantido pelo python usando o método lstrip
+
+DIVISÃO
+frase.SPLIT()--> Vai criar blocos com a cadeia de caracteres para cada espaço, e vai numerar cada caractere de cada bloco de 0 até o final, assim criando um bloco que contém essa numeração de 0 até o final,
+para cada split
+
+JUNÇÃO
+‘-’.JOIN(frase)--> Vai pegar o que contém nessa lista ou bloco, e fazer a junção, desmontando os blocos e juntando as palavras
+
+
+LISTAS:
+
+"""# Retorna uma nova lista em ordem crescente, e em ordem alfabética para listas de STR.
+lista.sort()
+print(lista)
+print(f'O vetor em ordem crescente {sorted(lista)}')
+# =============================================================================================
+
+# Conta quantos elementos possui dentro da lista.
+print(len(lista))
+
+# =============================================================================================
+
+# A soma dos numeros dentro da lista
+print(sum(lista))
+
+# =============================================================================================
+
+# Mostra o maior e o menor numero da lista
+print(max(lista))
+print(min(lista))
+
+# =============================================================================================
+
+# Para contar o numero de ocorrencias de um valor em uma lista, ou seja contar quantas vezes um valor esta na lista.
+print(lista.count(3))
+
+# =============================================================================================
+
+# Para adicionar elementos em lista, utilizamos a função .append.
+print(lista)
+lista.append(42) # adiciona um unico valor por vez, valor inserido sempre para o final.
+print(lista)
+# Adiciona um elemento por vez, nao podemos colcoar mais de 1 elemento dentro.
+#lista.append(22, 3)# Erro
+
+# O que podemos fazer é adicionar uma lista dentro de outra lista.
+lista.append([2, 4, 3]) # Adiciona a lista como elemento unico como uma sublista dentro da outra
+print(lista)
+
+# Outra maneira de adicionar elementos em uma lista, de forma adicional é o .extend
+lista.extend([2, 4, 5]) # coloca cada elemento da lista como valor adicional a lista
+print(lista)
+
+# =============================================================================================
+
+# Podemos inserir um novo elemento na lista informando a posiçao do indice.
+# OBS: Isso não substitui o valor inicial, o mesmo sera deslocado para a direita da lista.
+lista.insert( 2, 'Novo valor')
+print(lista)
+
+# =============================================================================================
+
+# Podemos juntar duas listas de duas formas.
+lista3 = lista + lista1
+print(lista3)
+
+# ou
+lista.extend(lista1)
+print(lista)
+
+# =============================================================================================
+
+# Podemos inverter uma lista de duas formas, com o .reverse ou [::-1]
+
+lista.reverse()
+print(lista)
+# ou
+print(lista1[::-1])
+# Tambem podemos reverte e ordenar uma lista.
+
+lista.sort(reverse=True)
+print(lista)
+
+# =============================================================================================
+
+# Podemos copiar uma lista com o .copy
+lista3 = lista.copy()
+print(lista3)
+# =============================================================================================
+
+# Podemos remover o ultimo elemento de uma lista com o .pop
+# OBS: O .pop não somente remove o ultimo elemento mas tambem o retorna.
+print(lista)
+lista.pop()
+print(lista)
+# Podemos remover um elemento pelo Indice.
+# OBS: Os elementos á direita deste indice serão deslocados para a esquerda.
+# OBS: Se não houver elemento no indice informado, teremos o erro Index Error.
+
+lista.pop(2)
+print(lista)
+
+# =============================================================================================
+
+# Podemos limpar uma lista por inteira (zerar uma lista) com o .clear
+print(lista)
+lista.clear()
+print(lista)
+
+# =============================================================================================
+
+# Podemos converter uma STR para lista usando o .split
+# Ex1
+string = 'Curso em Python'
+string = string.split()
+print(string)
+# OBS: Por padrão, o .split separa os elementos da lista pelo espaço entre elas.
+# Ex2
+string = 'Curso,em,Python'
+string = string.split(',')
+print(string)
+
+#iterando sobre uma lista com FOR e WHILE
+EX1 com FOR:
+cores = ['azul', 'amarelo', 'vermelho', 'branco']
+for cor in cores:
+    print(cores)
+
+EX2 com While:
+indice = 0
+while indice < len(cores):
+    print(cores[indice])
+    indice = indice + 1
+
+#EX3 com FOR.
+#O programa abaixo criado por mim, criara uma lista com 8 elementos na primeira parte com o FOR e na segunda
+#parte com o FOR ele somara todos elementos inteiros internos da lista e o imprimira.
+
+#vetor = []
+#soma = 0
+#for num in range(8):
+    #vetor.append(int(input('Digite um numero. ')))
+#for elemento in vetor:
+    #print(f'{elemento}', end=' ')
+    #soma = soma + elemento
+#print(f'a soma é {soma}')
+
+#EX4 com WHILE.
+
+carrinho = []                                                           # Criando uma lista vazia, por causa do input.
+produto = ''                                                            # Criado uma variavel do tipo STR, que vai receber os nomes dos produtos
+while produto != 'sair':                                                # While criado com a condição de parada enquanto produto for != a sair
+    print(f'A dicione um produto na lista ou digite sair para sair:')
+    produto = str(input('-'))                                           # O cliente vai digitar o produto atraves do input.
+    if produto != 'sair':                                               # Verificando se o produto é diferende de 'SAIR'
+        carrinho.append(produto)                                        # Se for diferente de 'SAIR' adicionamos ele no 'CARRINHO' e o lupe do While executa o algoritimo no escopo novamente
+for produto in carrinho:                                                # Se for = a 'SAIR' o programa encerra e passa para o FOR  imprimir para cada produto no 'CARRINHO'
+    print(produto)
+
+
+# =======================================================================================================================================
+#Utilizamos tambem variaves em listas
+#Ex:
+numeros = [1,2,3,4,5,]
+num1 = 1
+num2 = 2
+num3 = 3
+num4 = 4
+num5 = 5
+numeros = [num1, num2, num3, num4, num5]
+print(numeros)
+
+# =======================================================================================================================================
+
+# Fazemos acessos aos elementos de forma indexada.
+
+cores = ['azul', 'amarelo', 'vermelho', 'branco']
+print(cores[0])     # azul
+print(cores[1])     # amarelo
+print(cores[2])     # vermelho
+print(cores[3])     # branco
+
+# Fazer acessos aos elementos de formas indexadas inversa
+# Para entender melhor o indice negativo, pense na lista como um circulo onde o final de um elemento
+# esta ligado ao inicio da lista.
+
+print(cores[-1])     # branco
+print(cores[-2])     # vermelho
+print(cores[-3])     # amarelo
+print(cores[-4])     # azul
+# print(cores[-5])   # Erro pos nao existe indice -5
+
+# =======================================================================================================================================
+
+# Gerando incide em um FOR:
+
+cores = ['azul', 'amarelo', 'vermelho', 'branco']
+for indice, cor in enumerate(cores):
+    print(indice,cores)
+
+# =======================================================================================================================================
+
+#Encontrar o indice de um elemento na lista
+
+numeros = [5, 6, 7, 5, 8, 9, 10]
+print(numeros.index(6))
+
+# podemos fazer busca dentro de um range, qual indice começar a buscar.
+
+print(numeros.index(5,2))
+
+# podemos fazer busca dentro de um range, inicio/fim.
+print(numeros.index(8,3,6))
+
+"""
